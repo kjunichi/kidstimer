@@ -7,6 +7,7 @@ function createWindow () {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    minimizable: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -18,7 +19,7 @@ function createWindow () {
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
   mainWindow.setAlwaysOnTop(true)
-  
+
 }
 
 // This method will be called when Electron has finished
